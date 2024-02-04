@@ -5,7 +5,7 @@ import App.Vehiculo;
 
 import java.util.ArrayList;
 
-public class Taxi extends Vehiculo {
+public class Taxi extends Vehiculo implements Company{
     private ArrayList<Driver> driverArrayList = null;
     private String numeroLicencia;
 
@@ -28,16 +28,6 @@ public class Taxi extends Vehiculo {
 
     }
 
-    @Override
-    public String toString() {
-        return "Taxi{" +
-                "driverArrayList=" + driverArrayList +
-                ", numeroLicencia='" + numeroLicencia + '\'' +
-                ", matricula='" + matricula + '\'' +
-                ", modelo='" + modelo + '\'' +
-                ", potenciaCV=" + potenciaCV +
-                '}';
-    }
 
     @Override
     public void stopEngine() {
@@ -50,5 +40,23 @@ public class Taxi extends Vehiculo {
     }
 
 
+    @Override
+    public void paySalary() {
+        System.out.println(getModelo()+" Pay salary");
+    }
 
+    @Override
+    public void hireVehicle() {
+        System.out.println(getModelo()+" Hire ");
+    }
+    @Override
+    public String toString() {
+        return "Taxi{" +
+                "driverArrayList=" + driverArrayList +
+                ", numeroLicencia='" + numeroLicencia + '\'' +
+                ", matricula='" + matricula + '\'' +
+                ", modelo='" + modelo + '\'' +
+                ", potenciaCV=" + potenciaCV +
+                '}';
+    }
 }

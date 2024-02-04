@@ -31,5 +31,12 @@ public abstract class Vehiculo {
     public abstract void stopEngine();
     public abstract void startEngine();
 
-
+    @Override
+    public String toString() {
+        return "Vehiculo{" +
+                "matricula='" + matricula + '\'' +
+                ", modelo='" + modelo + '\'' +
+                ", potenciaCV=" + potenciaCV +
+                '}';
+    }
 }

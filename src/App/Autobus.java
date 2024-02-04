@@ -1,6 +1,6 @@
 package App;
 
-public class Autobus extends Vehiculo {
+public class Autobus extends Vehiculo implements Company{
     private String numeroPlazas;
 
     public Autobus(String numeroPlazas) {
@@ -26,5 +26,25 @@ public class Autobus extends Vehiculo {
 
     public String getNumeroPlazas() {
         return numeroPlazas;
+    }
+
+    @Override
+    public void paySalary() {
+        System.out.println(getModelo()+" Pay Salary");
+    }
+
+    @Override
+    public void hireVehicle() {
+        System.out.println(getModelo()+" Hire");
+    }
+
+    @Override
+    public String toString() {
+        return "Autobus{" +
+                "numeroPlazas='" + numeroPlazas + '\'' +
+                ", matricula='" + matricula + '\'' +
+                ", modelo='" + modelo + '\'' +
+                ", potenciaCV=" + potenciaCV +
+                '}';
     }
 }

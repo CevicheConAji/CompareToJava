@@ -1,18 +1,19 @@
 package App;
 
-import java.util.LinkedList;
+
+import java.util.ArrayList;
 
 public class ManageVehiculo {
     public static void main(String[] args) {
-        LinkedList<Taxi> taxiLinkedList = getLinkedList();
+        ArrayList<Taxi> taxiLinkedList = getLinkedList();
 
         startAndStop(taxiLinkedList);
 
 
     }
-    public static LinkedList<Taxi> getLinkedList(){
+    public static ArrayList<Taxi> getLinkedList(){
 
-        LinkedList<Taxi> taxiLinkedList = new LinkedList<>();
+        ArrayList<Taxi> taxiLinkedList = new ArrayList<>();
 
         Taxi t1 = new Taxi("FFG456","Mercedes AMG GLA",310,"2");
         Taxi t2 = new Taxi("FHG123","Mercedes AMG CLA",310,"4");
@@ -59,7 +60,7 @@ public class ManageVehiculo {
         return taxiLinkedList;
 
     }
-    public static void startAndStop(LinkedList<Taxi> taxiLinkedList){
+    public static void startAndStop(ArrayList<Taxi> taxiLinkedList){
         for (Taxi taxi:
              taxiLinkedList) {
             taxi.startEngine();
