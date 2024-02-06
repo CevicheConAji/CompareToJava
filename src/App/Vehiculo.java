@@ -1,9 +1,9 @@
 package App;
 
 public abstract class Vehiculo {
-    String matricula;
-    String modelo;
-    int potenciaCV;
+    protected String matricula;
+    protected String modelo;
+    protected int potenciaCV;
 
     public Vehiculo(String matricula, String modelo, int potenciaCV) {
         this.matricula = matricula;
