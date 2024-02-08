@@ -15,8 +15,6 @@ public class Taxi extends Vehiculo implements Company, Comparable<Taxi>{
         driverArrayList = new ArrayList<>();
     }
 
-    public Taxi() {
-    }
 
     @Override
     public String getMatricula() {

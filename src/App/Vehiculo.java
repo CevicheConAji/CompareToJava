@@ -23,10 +23,6 @@ public abstract class Vehiculo {
         return modelo;
     }
 
-    public int getPotenciaCV() {
-        return potenciaCV;
-    }
-
 
     public abstract void stopEngine();
     public abstract void startEngine();
